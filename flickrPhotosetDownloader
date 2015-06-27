@@ -4,7 +4,9 @@
 ##              --By Kyle Hampton 6.26.15--            ##
 ##						       ##
 ## To run, copy this .py file into a blank             ##
-## folder. Open a command prompt and type:             ##
+## folder. Change lines 33, 34, and 46 as noted.       ##
+##						       ##
+## Open a command prompt and type:                     ##
 ##  						       ##
 #! 'python flickrPhotosetDownloader.py XXXXXXXXXX no'  !#
 ##						       ##
@@ -43,7 +45,7 @@ setPhotos = flickr.photosets.getPhotos(photoset_id = photosetID)
 
 if clear == "clear":
 	print "\n---\nPurging previous files...\n---\n"
-	for file in os.listdir('/Users/kylehampton/Documents/python'):
+	for file in os.listdir('/Users/kylehampton/Documents/python'):		## CHANGE THIS LINE TO REFLECT THE FILE YOUR .PY IS SAVED IN
 		if file.endswith('.jpg'):
 			os.remove(file) 
 
