@@ -20,7 +20,6 @@
 #########################################################
 
 
-
 from sys import argv
 
 import flickrapi
@@ -29,19 +28,18 @@ import os
 
 script, photosetID, clear = argv
 
-
-#-- API key and initializing the API
+#-- API key and initializing the API --
 
 api_key = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'			## PUT YOUR API KEY IN BETWEEN THE APOSTROPHES HERE
 api_password = 'XXXXXXXXXXXXXXXXXXXXXX'				## PUT YOUR API SECRET IN BETWEEN THE APOSTROPHES HERE
 flickr = flickrapi.FlickrAPI(api_key, api_password)
 
-#-- extracting the photos from the gallery
+#-- extracting the photos from the gallery --
 
 print "\n---\nExtracting all photos from photoset...\n---\n"
 setPhotos = flickr.photosets.getPhotos(photoset_id = photosetID)
 
-#-- clearing previous files if requested--
+#-- clearing previous files if requested --
 
 if clear == "clear":
 	print "\n---\nPurging previous files...\n---\n"
